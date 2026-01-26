@@ -1,0 +1,213 @@
+.suites-hero {
+    padding-top: 180px;
+    background-color: var(--bg-soft);
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.hero-status {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.filter-btns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btns button {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 8px;
+    transition: var(--transition-fast);
+}
+
+.filter-btns button.active {
+    opacity: 1;
+    border-bottom-color: var(--accent);
+    color: var(--primary);
+}
+
+/* Suites Impact Grid */
+.suites-list {
+    padding: 120px 0;
+}
+
+.suite-premium-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+    margin-bottom: 160px;
+    align-items: center;
+}
+
+.suite-premium-row.row-reverse {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.suite-premium-row.row-reverse .suite-visual {
+    order: 2;
+}
+
+.suite-premium-row.row-reverse .suite-content {
+    order: 1;
+}
+
+.suite-visual {
+    position: relative;
+}
+
+.suite-img-parallax {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.spa-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: var(--primary);
+    color: white;
+    padding: 20px 30px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+}
+
+.suite-type-label {
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.suite-name {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.suite-desc-main {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.suite-features-list {
+    margin: 40px 0;
+}
+
+.suite-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.suite-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.btn-text-link {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* Expert Advice */
+.suites-expert-advice {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 140px 5%;
+}
+
+.advice-title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.advice-desc {
+    opacity: 0.7;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1.2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+
+    .suite-premium-row,
+    .suite-premium-row.row-reverse {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    .suite-premium-row.row-reverse .suite-visual,
+    .suite-premium-row.row-reverse .suite-content {
+        order: initial;
+    }
+
+    .suite-img-parallax {
+        height: 500px;
+    }
+
+    .spa-badge {
+        right: 20px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .suites-hero {
+        padding-top: 150px;
+    }
+
+    .suite-img-parallax {
+        height: 350px;
+    }
+
+    .suite-cta-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .suite-cta-group .btn {
+        width: 100%;
+    }
+
+    .filter-btns {
+        gap: 10px;
+    }
+
+    .filter-btns button {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+}

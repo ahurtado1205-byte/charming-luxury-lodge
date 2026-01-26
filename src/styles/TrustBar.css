@@ -1,0 +1,41 @@
+.trust-bar {
+    background-color: var(--white);
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--border);
+}
+
+.trust-bar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trust-icon {
+    color: var(--secondary);
+}
+
+.trust-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .trust-bar-container {
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}

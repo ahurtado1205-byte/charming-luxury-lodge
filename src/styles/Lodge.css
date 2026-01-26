@@ -1,0 +1,117 @@
+.lodge-hero {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-title {
+    color: white;
+    font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+/* Story Section */
+.lodge-story {
+    padding: 160px 0;
+}
+
+.story-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-desc {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.story-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.feat-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Amenities */
+.lodge-amenities {
+    background-color: var(--bg-soft);
+    padding: 160px 5%;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.amenity {
+    background-color: var(--white);
+}
+
+.amenity-img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.amenity-info {
+    padding: 40px;
+}
+
+.amenity-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.amenity-desc {
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .lodge-hero {
+        height: 60vh;
+    }
+
+    .story-desc {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .story-features {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenity-img {
+        height: 300px;
+    }
+
+    .amenity-info {
+        padding: 30px;
+    }
+}

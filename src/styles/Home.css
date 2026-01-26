@@ -1,0 +1,361 @@
+/* Hero */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hero-content {
+    max-width: 1050px;
+    padding: 0 5%;
+    z-index: 10;
+    color: var(--white);
+}
+
+.hero-award {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(36, 39, 36, 0.6);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    margin-bottom: 35px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.2rem, 8vw, 5.2rem);
+    margin-bottom: 25px;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    color: var(--white);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    line-height: 1.15;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    margin-bottom: 50px;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Intro grid */
+.intro {
+    background-color: var(--bg);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.location-highlight {
+    margin-top: 20px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+.floating-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 30px 30px 0 var(--bg-soft);
+}
+
+/* Itineraries */
+.itineraries {
+    background-color: var(--bg-soft);
+}
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.itinerary-card {
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.itinerary-card:hover {
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+}
+
+.itinerary-img {
+    height: 350px;
+}
+
+.itinerary-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.itinerary-info {
+    padding: 40px;
+}
+
+.itinerary-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.itinerary-desc {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.btn-link {
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+}
+
+/* Stag Feature */
+.stag-feature {
+    padding: 0;
+}
+
+.stag-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.stag-content {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10% 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stag-emblem-img {
+    width: 220px;
+    margin-bottom: 40px;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+    transition: transform 0.6s ease;
+}
+
+.stag-label {
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.stag-btns {
+    margin-top: 40px;
+}
+
+.stag-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Testimonials */
+.testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.testi-card {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--bg-soft);
+}
+
+.quote-icon {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.testi-text {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.author-name {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+/* Direct Benefits */
+.direct-benefits {
+    background-color: var(--primary);
+    color: white;
+    padding: 120px 5%;
+    text-align: center;
+}
+
+.benefits-box {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.benefits-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.benefits-desc {
+    opacity: 0.8;
+    margin-bottom: 60px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+
+    .intro-grid,
+    .stag-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stag-container {
+        min-height: auto;
+    }
+
+    .stag-visual {
+        order: -1;
+        height: 50vh;
+    }
+
+    .stag-content {
+        padding: 80px 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+    }
+
+    .floating-img {
+        height: 400px;
+        box-shadow: 15px 15px 0 var(--bg-soft);
+    }
+
+    .intro-grid {
+        gap: 50px;
+    }
+
+    .itinerary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .itinerary-img {
+        height: 250px;
+    }
+
+    .testi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-title {
+        font-size: 1.8rem;
+    }
+
+    .itinerary-info {
+        padding: 30px;
+    }
+
+    .stag-emblem-img {
+        width: 160px;
+    }
+}

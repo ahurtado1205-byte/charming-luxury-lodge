@@ -1,0 +1,176 @@
+.wellness-page {
+    padding-bottom: 80px;
+}
+
+.wellness-hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.wellness-hero .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wellness-hero .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wellness-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+}
+
+.wellness-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.wellness-hero .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 10px 0;
+}
+
+.wellness-grid {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.wellness-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.wellness-item.row-reverse {
+    direction: ltr;
+    /* Ensure text flows correctly but switch grid order */
+}
+
+.wellness-item.row-reverse .wellness-visual {
+    order: 2;
+}
+
+.wellness-item.row-reverse .wellness-info {
+    order: 1;
+}
+
+.wellness-visual {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-xl);
+}
+
+.wellness-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.wellness-item:hover .wellness-visual img {
+    transform: scale(1.05);
+}
+
+.wellness-info {
+    padding: 20px;
+}
+
+.wellness-icon {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.wellness-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.wellness-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--text-light);
+}
+
+.wellness-feats {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wellness-feats li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.wellness-feats li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.wellness-cta {
+    margin-top: 120px;
+    padding: 100px 0;
+    background: var(--bg-soft);
+    text-align: center;
+}
+
+.wellness-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.wellness-cta p {
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .wellness-item {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .wellness-item.row-reverse .wellness-visual {
+        order: 1;
+    }
+
+    .wellness-item.row-reverse .wellness-info {
+        order: 2;
+    }
+
+    .wellness-hero {
+        height: 60vh;
+    }
+}

@@ -1,0 +1,120 @@
+.gallery-page {
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.gallery-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+}
+
+/* Mansonry-like effect for specific items */
+.gallery-item.item-0 {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.gallery-item.item-3 {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-hover {
+    opacity: 1;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-cta {
+    margin-top: 100px;
+    text-align: center;
+    padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+    .gallery-impact-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .gallery-item.item-0,
+    .gallery-item.item-3 {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
