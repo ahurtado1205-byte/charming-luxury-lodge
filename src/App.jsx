@@ -79,7 +79,7 @@ const AppContent = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/charming-luxury-lodge">
       <ScrollToTop />
       <AppContent />
     </Router>
