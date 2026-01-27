@@ -31,6 +31,10 @@ export const IMAGES = {
     stag_atmosphere: `${BASE}images/stag-dining-view.jpg`,
     stag_emblem: `${BASE}images/stag-emblem-new.jpg`,
     stag_gastronomy: "https://www.charming-bariloche.com/wp-content/uploads/2022/09/gastronomia-gral.jpg",
+    stag_storytelling: `${BASE}images/stag_storytelling.png`,
+    stag_dish_1: `${BASE}images/stag_dish_patagonian_lamb.png`,
+    stag_dish_2: `${BASE}images/stag_dish_dessert.png`,
+    stag_wine: `${BASE}images/stag_wine_experience.png`,
 
     // Gallery / Others
     gallery: [
