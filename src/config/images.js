@@ -35,6 +35,7 @@ export const IMAGES = {
     stag_dish_1: `${BASE}images/stag_dish_patagonian_lamb.png`,
     stag_dish_2: `${BASE}images/stag_dish_dessert.png`,
     stag_wine: `${BASE}images/stag_wine_experience.png`,
+    little_stag: `${BASE}images/little_stag.png`,
 
     // Gallery / Others
     gallery: [

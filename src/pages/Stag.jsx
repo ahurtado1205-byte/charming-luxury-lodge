@@ -89,6 +89,32 @@ const Stag = () => {
                 </div>
             </section>
 
+            {/* Little Stag - The Treehouse */}
+            <section className="little-stag reveal">
+                <div className="container">
+                    <div className="little-stag-grid">
+                        <div className="little-stag-content">
+                            <div className="stag-badge">EXPERIENCIA EXCLUSIVA</div>
+                            <h2 className="section-title">Little Stag</h2>
+                            <p className="p-accent">La magia de cenar en una casa del árbol.</p>
+                            <p>Ubicado en el corazón de nuestro bosque nativo, "Little Stag" es un espacio privado diseñado para momentos inolvidables. Una cabaña de madera suspendida entre árboles, donde la privacidad y la naturaleza se funden para crear una velada mágica.</p>
+                            <p>Ideal para propuestas de compromiso, aniversarios o simplemente para quienes buscan la exclusividad absoluta bajo las estrellas de Bariloche.</p>
+                            <ul className="little-stag-list">
+                                <li>Capacidad máxima: 2 a 4 personas</li>
+                                <li>Menú de pasos diseñado a medida</li>
+                                <li>Servicio de sommelier privado</li>
+                                <li>Ambientación con candelabros y flores</li>
+                            </ul>
+                            <button className="btn btn-primary">Consultar Disponibilidad</button>
+                        </div>
+                        <div className="little-stag-image-wrapper">
+                            <img src={IMAGES.little_stag} alt="Little Stag Treehouse" className="little-stag-img" />
+                            <div className="image-overlay-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Signature Dish Showcase (The "Visual Menu") */}
             <section id="menu" className="stag-visual-menu reveal">
                 <div className="container">

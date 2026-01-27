@@ -17,6 +17,10 @@
     overflow: hidden;
 }
 
+.stag-hero .hero-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+}
+
 .stag-badge {
     display: inline-block;
     padding: 8px 16px;
@@ -126,6 +130,65 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--primary);
+}
+
+/* Little Stag Section */
+.little-stag {
+    padding: 140px 0;
+    background-color: #fcfcfc;
+}
+
+.little-stag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.little-stag-image-wrapper {
+    position: relative;
+    height: 700px;
+}
+
+.little-stag-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 20px 20px 0 var(--bg-soft);
+}
+
+.image-overlay-border {
+    position: absolute;
+    top: -20px;
+    left: -200px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid var(--accent);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.little-stag-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 40px;
+}
+
+.little-stag-list li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-light);
+}
+
+.little-stag-list li::before {
+    content: '•';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 /* Visual Menu Section */
