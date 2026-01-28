@@ -261,15 +261,45 @@
 
 .clue-box {
     background: rgba(255, 255, 255, 0.03);
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
     border-left: 2px solid var(--accent);
 }
 
-.clue-box p {
-    margin-top: 15px;
-    font-style: italic;
-    opacity: 0.8;
+.clue-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.curious-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.curious-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    padding-left: 20px;
+    position: relative;
+}
+
+.curious-list li::before {
+    content: '•';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: 800;
 }
 
 .reward-inner {

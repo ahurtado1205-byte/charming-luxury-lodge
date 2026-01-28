@@ -20,7 +20,13 @@ const SeasonalCalendar = () => {
             mysteryOffer: 'Escapada "Fuego Otoñal": 4 noches al precio de 3 + Degustación de chocolates locales en la Suite.',
             image: IMAGES.exterior,
             hook: 'Descubra el silencio del bosque cuando las hojas caen...',
-            clue: "¿Sabía que las lengas cambian de color según la altura del cerro?"
+            curiousFacts: [
+                "Las Lengas cambian de color en capas, descendiendo por el cerro como una marea roja.",
+                "El viento se detiene casi por completo, creando el 'efecto espejo' más puro en los lagos.",
+                "Los hongos de pino y los 'Llao Llao' brotan en los troncos de los árboles centenarios.",
+                "Es la temporada de la Rosa Mosqueta, cuyos frutos llenan de color las orillas de los senderos.",
+                "Los ciervos colorados inician la 'brama', un sonido ancestral que resuena en los valles."
+            ]
         },
         {
             id: 'winter',
@@ -32,7 +38,13 @@ const SeasonalCalendar = () => {
             mysteryOffer: 'Experiencia "Nieve & Fuego": Traslados exclusivos al Cerro + Kit de invierno (Vino caliente y mantas de lana puras).',
             image: IMAGES.hero_night,
             hook: 'Un refugio cálido mientras el mundo se congela afuera.',
-            clue: "El Nahuel Huapi nunca se congela, manteniendo un azul profundo bajo la nieve."
+            curiousFacts: [
+                "El Lago Nahuel Huapi, con 464 metros de profundidad, nunca se congela.",
+                "Los copos de nieve pueden llegar a medir hasta 5 cm en días de calma total.",
+                "Usamos leña de manzanos en las suites para que el humo tenga un aroma cítrico y relajante.",
+                "El aire es tan seco que la visibilidad del Cerro Tronador es perfecta desde el lodge.",
+                "La nieve 'polvo' de Bariloche es famosa por ser ultra ligera, ideal para deportistas."
+            ]
         },
         {
             id: 'spring',
@@ -44,7 +56,13 @@ const SeasonalCalendar = () => {
             mysteryOffer: 'Renacer Wellness: Upgrade garantizado a Master Suite + Circuito de masajes con esencias de flores patagónicas.',
             image: IMAGES.spa_exterior,
             hook: 'Sea testigo del momento exacto en que la vida despierta.',
-            clue: "Las aves migratorias regresan, trayendo cantos nuevos al bosque."
+            curiousFacts: [
+                "El rugido de las cascadas es máximo debido al deshielo de las cumbres nevadas.",
+                "Miles de flores Amancay cubren las montañas con una alfombra amarilla vibrante.",
+                "Regresan los Cóndores de sus refugios altos; es fácil verlos planear sobre el lodge.",
+                "Los brotes de los Ñires desprenden un aroma a resina y tierra húmeda único.",
+                "Los días se 'estiran', dándonos más horas de sol para disfrutar el spa outdoor."
+            ]
         },
         {
             id: 'summer',
@@ -56,7 +74,13 @@ const SeasonalCalendar = () => {
             mysteryOffer: 'Aventura de Verano: Picnic gourmet privado en playa secreta + Navegación exclusiva al atardecer.',
             image: IMAGES.aerial_wide,
             hook: 'La luz que nunca se acaba y el lago que invita a quedarse.',
-            clue: "Es el único momento del año donde se puede nadar bajo la luz de las 9 PM."
+            curiousFacts: [
+                "Bariloche goza de las 'Noches Planisferio': el sol se oculta recién a las 22:00 hs.",
+                "El lago alcanza su temperatura ideal para kayak, con transparencia de 20 metros.",
+                "Existen playas secretas en el lago que únicamente son accesibles en bote en esta época.",
+                "La Vía Láctea es visible a simple vista desde nuestros jacuzzis durante el verano.",
+                "Sedimentos glaciares tiñen el agua de los lagos de altura con un turquesa hipnótico."
+            ]
         }
     ];
 
@@ -136,8 +160,15 @@ const SeasonalCalendar = () => {
                             <div className="discovery-main">
                                 <div className="discovery-clue">
                                     <div className="clue-box">
-                                        <Eye size={20} />
-                                        <p>{activeSeason.clue}</p>
+                                        <div className="clue-header">
+                                            <Eye size={20} />
+                                            <span>5 Hechos Curiosos</span>
+                                        </div>
+                                        <ul className="curious-list">
+                                            {activeSeason.curiousFacts.map((fact, i) => (
+                                                <li key={i}>{fact}</li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
 
