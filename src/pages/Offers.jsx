@@ -1,6 +1,7 @@
 import React from 'react';
 import { IMAGES } from '../config/images';
 import { Tag, Calendar, Gift, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import '../styles/Offers.css';
 
 const Offers = () => {
@@ -63,7 +64,7 @@ const Offers = () => {
                         <span className="hook-badge">LÚDICO & MISTERIOSO</span>
                         <h2>El Almanaque de Secretos</h2>
                         <p>No todas nuestras ofertas son públicas. Hemos escondido beneficios exclusivos dentro de las estaciones de la Patagonia. ¿Se atreve a descubrirlos?</p>
-                        <a href="/calendar" className="btn btn-accent">Explorar el Almanaque</a>
+                        <Link to="/calendar" className="btn btn-accent">Explorar el Almanaque</Link>
                     </div>
                 </div>
             </section>
@@ -85,12 +86,12 @@ const Offers = () => {
                             </ul>
                             <div className="promo-footer">
                                 <span className="validity"><Calendar size={14} /> {promo.validUntil}</span>
-                                <a
-                                    href={promo.title.includes("Enamorados") ? "/promo/mes-de-los-enamorados" : "/contact"}
+                                <Link
+                                    to={promo.title.includes("Enamorados") ? "/promo/mes-de-los-enamorados" : "/contact"}
                                     className="btn btn-primary"
                                 >
                                     {promo.title.includes("Enamorados") ? "VER EXPERIENCIA" : "Me interesa esta promo"} <ChevronRight size={18} />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

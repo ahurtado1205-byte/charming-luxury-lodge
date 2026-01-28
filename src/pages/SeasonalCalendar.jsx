@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Leaf, Snowflake, Flower2, Sun, HelpCircle, ArrowRight, BookOpen, Lock, Compass, Eye, Map as MapIcon, Sparkles } from 'lucide-react';
+import { Leaf, Snowflake, Flower, Sun, HelpCircle, ArrowRight, BookOpen, Lock, Compass, Eye, Map as MapIcon, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { IMAGES } from '../config/images';
 import '../styles/SeasonalCalendar.css';
 
@@ -37,7 +38,7 @@ const SeasonalCalendar = () => {
             id: 'spring',
             name: 'Primavera',
             months: 'Septiembre - Noviembre',
-            icon: <Flower2 />,
+            icon: <Flower />,
             color: '#68D391',
             secret: 'El despertar de los Amancay. Flores amarillas tapizan los cerros y las cascadas rugen con el deshielo de las altas cumbres.',
             mysteryOffer: 'Renacer Wellness: Upgrade garantizado a Master Suite + Circuito de masajes con esencias de flores patagónicas.',
@@ -100,7 +101,9 @@ const SeasonalCalendar = () => {
                         >
                             <div className="card-visual">
                                 <img src={season.image} alt={season.name} />
-                                <div className="card-overlay" style={{ backgroundColor: season.color }}></div>
+                                {activeSeason && activeSeason.id === season.id && (
+                                    <div className="season-overlay" style={{ background: `linear-gradient(45deg, ${activeSeason.color}CC, transparent)` }}></div>
+                                )}
                                 <div className="card-icon">{season.icon}</div>
                             </div>
                             <div className="card-info">
@@ -144,7 +147,7 @@ const SeasonalCalendar = () => {
                                         <h3 className="reward-name">{activeSeason.mysteryOffer}</h3>
                                         <p className="reward-hook">{activeSeason.hook}</p>
                                         <div className="reward-actions">
-                                            <button className="btn btn-accent">Reclamar este Secreto</button>
+                                            <Link to="/contact" className="btn btn-accent">Reclamar este Secreto</Link>
                                             <button className="btn btn-outline-white" onClick={() => setActiveSeason(null)}>Seguir Explorando</button>
                                         </div>
                                     </div>
