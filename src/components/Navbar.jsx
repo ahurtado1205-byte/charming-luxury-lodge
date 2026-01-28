@@ -33,12 +33,30 @@ const Navbar = () => {
                 </Link>
 
                 <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                    <Link to="/lodge" className="nav-link">LODGE</Link>
-                    <Link to="/suites" className="nav-link">SUITES</Link>
-                    <Link to="/wellness" className="nav-link">WELLNESS</Link>
-                    <Link to="/stag" className="nav-link">GASTRONOMÍA</Link>
-                    <Link to="/offers" className="nav-link">PROMOS</Link>
-                    <Link to="/gallery" className="nav-link">GALERÍA</Link>
+                    <Link to="/lodge" className="nav-link">
+                        <span className="link-title">LODGE</span>
+                        <span className="link-subtitle">La esencia de Charming</span>
+                    </Link>
+                    <Link to="/suites" className="nav-link">
+                        <span className="link-title">SUITES</span>
+                        <span className="link-subtitle">Vistas que no se olvidan</span>
+                    </Link>
+                    <Link to="/wellness" className="nav-link">
+                        <span className="link-title">WELLNESS</span>
+                        <span className="link-subtitle">Spa, silencio, lago</span>
+                    </Link>
+                    <Link to="/stag" className="nav-link">
+                        <span className="link-title">GASTRONOMÍA</span>
+                        <span className="link-subtitle">Stag: fuego fino</span>
+                    </Link>
+                    <Link to="/offers" className="nav-link">
+                        <span className="link-title">PROMOS</span>
+                        <span className="link-subtitle">Escapadas y mucho más</span>
+                    </Link>
+                    <Link to="/gallery" className="nav-link">
+                        <span className="link-title">GALERÍA</span>
+                        <span className="link-subtitle">Un adelanto del viaje</span>
+                    </Link>
                 </div>
 
                 <div className="nav-actions">
