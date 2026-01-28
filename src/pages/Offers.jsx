@@ -57,6 +57,17 @@ const Offers = () => {
                 </div>
             </section>
 
+            <section className="almanac-hook container reveal">
+                <div className="almanac-cta-box">
+                    <div className="almanac-text">
+                        <span className="hook-badge">LÚDICO & MISTERIOSO</span>
+                        <h2>El Almanaque de Secretos</h2>
+                        <p>No todas nuestras ofertas son públicas. Hemos escondido beneficios exclusivos dentro de las estaciones de la Patagonia. ¿Se atreve a descubrirlos?</p>
+                        <a href="/calendar" className="btn btn-accent">Explorar el Almanaque</a>
+                    </div>
+                </div>
+            </section>
+
             <section className="promos-list container">
                 {promos.map((promo, index) => (
                     <div key={index} className="promo-landing-card reveal">

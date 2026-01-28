@@ -17,6 +17,7 @@ import Events from './pages/Events';
 import Wellness from './pages/Wellness';
 import Gallery from './pages/Gallery';
 import RomanticMonth from './pages/promos/RomanticMonth';
+import SeasonalCalendar from './pages/SeasonalCalendar';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -69,6 +70,7 @@ const AppContent = () => {
           <Route path="/wellness" element={<Wellness />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/promo/mes-de-los-enamorados" element={<RomanticMonth />} />
+          <Route path="/calendar" element={<SeasonalCalendar />} />
         </Routes>
       </main>
       <Footer />

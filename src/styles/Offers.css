@@ -41,10 +41,61 @@
 }
 
 .promos-list {
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+.almanac-hook {
+    margin-top: 80px;
+}
+
+.almanac-cta-box {
+    background: linear-gradient(135-deg, var(--primary) 0%, #1a1d1a 100%);
+    padding: 80px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    border: 1px solid var(--accent);
+}
+
+.almanac-cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(166, 141, 101, 0.1) 0%, transparent 70%);
+}
+
+.hook-badge {
+    background: var(--accent);
+    color: var(--primary);
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.almanac-text h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.almanac-text p {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    line-height: 1.6;
 }
 
 .promo-landing-card {
