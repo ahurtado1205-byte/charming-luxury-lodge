@@ -16,8 +16,8 @@ const SeasonalCalendar = () => {
             months: 'Marzo - Mayo',
             icon: <Leaf />,
             color: '#A65D37',
-            secret: 'El bosque se incendia sin fuego. Las Lengas tornan su follaje a un rojo intenso, creando espejos de rubí en el Lago Nahuel Huapi.',
-            mysteryOffer: 'Escapada "Fuego Otoñal": 4 noches al precio de 3 + Degustación de chocolates locales en la Suite.',
+            secret: 'El bosque se viste de rubí sin necesidad de fuego. Las Lengas tornan su follaje a un rojo intenso, creando espejos de rubí en el Lago Nahuel Huapi.',
+            mysteryOffer: 'Escapada "Rubí Otoñal": 4 noches al precio de 3 + Degustación de chocolates locales en la Suite.',
             image: IMAGES.exterior,
             hook: 'Descubra el silencio del bosque cuando las hojas caen...',
             curiousFacts: [
